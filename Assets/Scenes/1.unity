@@ -6445,6 +6445,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 738646681595172698, guid: a0e7714593b5a5f419539c17c6b8d957, type: 3}
+      propertyPath: m_Version
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 738646681595172699, guid: a0e7714593b5a5f419539c17c6b8d957, type: 3}
+      propertyPath: m_Aperture
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 738646681595172699, guid: a0e7714593b5a5f419539c17c6b8d957, type: 3}
+      propertyPath: m_BladeCount
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 738646681744756154, guid: a0e7714593b5a5f419539c17c6b8d957, type: 3}
       propertyPath: m_Name
       value: Player
