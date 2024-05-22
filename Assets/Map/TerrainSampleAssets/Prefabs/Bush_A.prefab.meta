@@ -1,10 +1,5 @@
 fileFormatVersion: 2
 guid: 0ec1c69bd47ad864f96cc2b516f6cd4b
-PrefabImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
   productId: 145808
@@ -12,3 +7,8 @@ AssetOrigin:
   packageVersion: 2.0.1
   assetPath: Assets/TerrainSampleAssets/Prefabs/Bush_A.prefab
   uploadId: 511657
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
