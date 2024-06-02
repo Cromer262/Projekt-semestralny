@@ -15,6 +15,11 @@ public class Player : MonoBehaviour
     private bool isRunning = false;
     private GameObject currentObject = null;
 
+    // New variables for shooting
+    public float shootingRange = 50f;
+    public float damage = 10f;
+    public GameObject bulletImpactPrefab;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -28,6 +33,7 @@ public class Player : MonoBehaviour
         HandleCameraMovement();
         HandleJumping();
         HandlePickup();
+        HandleShooting(); // New method to handle shooting
     }
 
     void HandleMovement()
@@ -110,6 +116,36 @@ public class Player : MonoBehaviour
             }
 
             Debug.Log("Object picked up: " + currentObject.name);
+        }
+    }
+
+    // New method to handle shooting
+    void HandleShooting()
+    {
+        if (Input.GetButtonDown("Fire1")) // Default is left mouse button
+        {
+            Shoot();
+        }
+    }
+
+    // Method to perform shooting
+    void Shoot()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, shootingRange))
+        {
+            Debug.Log("Hit: " + hit.transform.name);
+
+            if (hit.transform.CompareTag("Enemy"))
+            {
+                // Assuming the enemy has a script with a TakeDamage method
+                hit.transform.GetComponent<Enemy>().TakeDamage(damage);
+
+                if (bulletImpactPrefab != null)
+                {
+                    Instantiate(bulletImpactPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                }
+            }
         }
     }
 }
