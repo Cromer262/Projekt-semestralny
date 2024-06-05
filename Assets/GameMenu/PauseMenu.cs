@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(true);
-            Time.timeScale = 0f;
+            Time.timeScale = 0f; // Останавливаем время в игре
             isPaused = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -60,7 +60,7 @@ public class PauseMenu : MonoBehaviour
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(false);
-            Time.timeScale = 1f;
+            Time.timeScale = 1f; // Возобновляем время в игре
             isPaused = false;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

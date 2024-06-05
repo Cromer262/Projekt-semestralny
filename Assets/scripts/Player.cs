@@ -29,11 +29,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        HandleMovement();
-        HandleCameraMovement();
-        HandleJumping();
-        HandlePickup();
-        HandleShooting(); // New method to handle shooting
+        if (!PauseMenu.isPaused)
+        {
+            HandleMovement();
+            HandleCameraMovement();
+            HandleJumping();
+            HandlePickup();
+            HandleShooting(); // New method to handle shooting
+        }
     }
 
     void HandleMovement()
